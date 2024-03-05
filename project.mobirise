@@ -67,7 +67,7 @@
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 58,
+    "uniqCompNum": 59,
     "versionPublish": "5.7.12",
     "screenshot": "screenshot.png",
     "mcSmartCart": {
@@ -930,6 +930,109 @@
           "_anchor": "form1-1l",
           "_isUserblock": true,
           "_cid": "u6bFm6C5IB",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_name": "content5",
+          "_sourceTheme": "firmm4",
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".image-wrapper img": {
+              "width": "100%",
+              "object-fit": "cover"
+            },
+            ".card-title": {
+              "margin-bottom": "26px",
+              "color": "@secondaryColor"
+            },
+            ".mbr-text": {
+              "margin-bottom": "30px"
+            },
+            ".iconfont-wrapper": {
+              "position": "relative",
+              "z-index": "1",
+              "margin-bottom": "30px",
+              "display": "inline-block",
+              "text-align": "center",
+              "width": "70px",
+              "height": "70px",
+              "svg": {
+                "position": "absolute",
+                "top": "-20px",
+                "left": "-28px",
+                "#grad_1": {
+                  "stop-color": "@iconColor"
+                },
+                "#grad_2": {
+                  "stop-color": "lighten(@iconColor, 20)"
+                },
+                "#blur_svg": {
+                  "flood-color": "@iconColor"
+                }
+              },
+              ".mbr-iconfont": {
+                "color": "#ffffff",
+                "font-size": "38px",
+                "line-height": "73px",
+                "position": "absolute",
+                "top": "0",
+                "left": "14px",
+                "z-index": "5"
+              }
+            },
+            "@media (min-width: 992px)": {
+              ".text-wrapper when (@reverse)": {
+                "padding-right": "2rem"
+              },
+              ".text-wrapper when not (@reverse)": {
+                "padding-right": "0",
+                "padding-left": "2rem"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".text-wrapper": {
+                "text-align": "center"
+              },
+              ".image-wrapper": {
+                "margin-bottom": "40px"
+              },
+              ".mbr-text": {
+                "margin-bottom": "20px"
+              },
+              ".iconfont-wrapper": {
+                "margin-bottom": "20px"
+              }
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            }
+          },
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"firmm4_content5\" group=\"Content\" data-bg-video=\"{{bg.type == 'video' &amp;&amp; bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" name=\"imageWidth\" title=\"Image\" min=\"4\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverse\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked=\"\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked=\"\">\n        <input type=\"checkbox\" title=\"Icon\" name=\"showIcon\">\n        <input type=\"color\" title=\"Icon Color\" value=\"#6b3df0\" name=\"iconColor\" condition=\"showIcon\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax=\"\">\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected=\"\">\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@PROJECT_PATH@/assets/images/background.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked=\"\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n        <input type=\"range\" inline=\"\" title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    \n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row align-items-center justify-content-center\" mbr-class=\"{'flex-row-reverse': reverse}\">\n            <div class=\"col-12 col-md-6 col-sm-8 col-lg order-1\">\n                <div class=\"text-wrapper\">\n                    <div class=\"icon_block\" mbr-if=\"showIcon\">\n                        <div class=\"iconfont-wrapper\">\n                            <svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"> <defs> <filter filterUnits=\"userSpaceOnUse\" id=\"filter_svg\" x=\"0px\" y=\"0px\" width=\"124px\" height=\"133px\"> <feOffset in=\"SourceAlpha\" dx=\"0\" dy=\"10\"></feOffset> <feGaussianBlur result=\"blurOut\" stdDeviation=\"5.477\"></feGaussianBlur> <feFlood id=\"blur_svg\" result=\"floodOut\"></feFlood> <feComposite operator=\"atop\" in=\"floodOut\" in2=\"blurOut\"></feComposite> <feComponentTransfer> <feFuncA type=\"linear\" slope=\"0.4\"></feFuncA> </feComponentTransfer> <feMerge> <feMergeNode></feMergeNode> <feMergeNode in=\"SourceGraphic\"></feMergeNode> </feMerge> </filter> <linearGradient id=\"grad_svg\" x1=\"0%\" x2=\"76%\" y1=\"64%\" y2=\"0%\"> <stop id=\"grad_1\" offset=\"0%\" stop-opacity=\"1\"></stop> <stop id=\"grad_2\" offset=\"100%\" stop-opacity=\"1\"></stop> </linearGradient> </defs> <g filter=\"url(#filter_svg)\"> <path fill-rule=\"evenodd\" fill=\"rgb(255, 255, 255)\" d=\"M93.962,40.676 L94.014,71.763 L94.014,71.763 C94.018,73.881 92.902,75.831 91.086,76.878 L64.497,92.210 L64.497,92.210 C62.681,93.257 60.443,93.242 58.627,92.169 L31.971,76.427 L31.971,76.427 C30.160,75.359 29.044,73.400 29.041,71.289 L28.988,40.201 L28.988,40.201 C28.984,38.083 30.101,36.133 31.916,35.086 L58.504,19.752 L58.504,19.752 C60.319,18.705 62.557,18.720 64.373,19.793 L91.030,35.534 L91.030,35.534 C92.842,36.603 93.960,38.563 93.962,40.676 Z\"></path> </g> <path fill=\"url(#grad_svg)\" d=\"M93.962,40.676 L94.014,71.763 L94.014,71.763 C94.018,73.881 92.902,75.831 91.086,76.878 L64.497,92.210 L64.497,92.210 C62.681,93.257 60.443,93.242 58.627,92.169 L31.971,76.427 L31.971,76.427 C30.160,75.359 29.044,73.400 29.041,71.289 L28.988,40.201 L28.988,40.201 C28.984,38.083 30.101,36.133 31.916,35.086 L58.504,19.752 L58.504,19.752 C60.319,18.705 62.557,18.720 64.373,19.793 L91.030,35.534 L91.030,35.534 C92.842,36.603 93.960,38.563 93.962,40.676 Z\"></path> </svg>\n                            <span mbr-icon=\"\" class=\"mbr-iconfont mobi-mbri-shopping-cart mobi-mbri\"></span>\n                        </div>\n                    </div>\n                    <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .icon_block\">\n                        <b>Promote Your Company</b>\n                    </h4>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aliquid inventore tenetur laudantium aspernatur ipsa tempore repellat ut. Minima maiores debitis possimus? Quibusdam excepturi?</p>\n                    <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" mbr-buttons=\"\" mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-info-outline\" href=\"#\" data-app-placeholder=\"Type Text\">Read More</a></div>\n                </div>\n            </div>\n            <div class=\"col-12 col-md-7 col-sm-8 col-lg-{{imageWidth}}\">\n                <div class=\"image-wrapper\">\n                    <img src=\"@PROJECT_PATH@/assets/images/firm16.jpg\" alt=\"Mobirise\">\n                </div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_anchor": "content5-1m",
+          "_isUserblock": true,
+          "_cid": "u6bFRsDTfd",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
