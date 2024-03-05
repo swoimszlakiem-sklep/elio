@@ -1509,6 +1509,100 @@ button {
   position: absolute;
   top: 0;
 }
+.cid-u6bGoqAu6x {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #273240;
+}
+.cid-u6bGoqAu6x .line {
+  height: .8px;
+  background: #ffffff;
+  opacity: .05;
+  margin-bottom: 25px;
+}
+.cid-u6bGoqAu6x .text-white {
+  color: #a99fc5 !important;
+}
+.cid-u6bGoqAu6x .text-white:hover {
+  color: #ffffff !important;
+}
+.cid-u6bGoqAu6x .foot-menu {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-bottom: 0;
+}
+.cid-u6bGoqAu6x .foot-menu li {
+  padding: 10px;
+}
+.cid-u6bGoqAu6x .foot-menu a {
+  display: inline-block;
+  line-height: 1.87;
+  position: relative;
+  transition: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.cid-u6bGoqAu6x .foot-menu a:before {
+  width: 0;
+  left: auto;
+  right: 0;
+  bottom: 5px;
+  height: 1px;
+  content: "";
+  position: absolute;
+  transition: width 0.2s linear;
+  background: #ffffff;
+}
+.cid-u6bGoqAu6x .foot-menu a:hover::before {
+  left: 0;
+  width: 100%;
+  right: auto;
+}
+.cid-u6bGoqAu6x .social-list {
+  padding: 10px;
+  margin-bottom: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cid-u6bGoqAu6x .social-list .mbr-iconfont-social {
+  font-size: 1rem;
+  color: #ffffff;
+}
+.cid-u6bGoqAu6x .social-list .soc-item {
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 13px;
+}
+.cid-u6bGoqAu6x .social-list a {
+  padding: 8px;
+  line-height: 1;
+  opacity: .5;
+}
+.cid-u6bGoqAu6x .social-list a:hover {
+  opacity: 1;
+}
+.cid-u6bGoqAu6x .mbr-text {
+  padding-top: 10px;
+  margin-bottom: 0;
+  transition: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+@media (max-width: 767px) {
+  .cid-u6bGoqAu6x .foot-menu {
+    margin-top: 10px;
+    justify-content: center;
+  }
+  .cid-u6bGoqAu6x .mbr-text {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
 .cid-tUVzNS5Uhk {
   padding-top: 30px;
   padding-bottom: 30px;

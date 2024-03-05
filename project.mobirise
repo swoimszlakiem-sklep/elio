@@ -67,7 +67,7 @@
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 59,
+    "uniqCompNum": 60,
     "versionPublish": "5.7.12",
     "screenshot": "screenshot.png",
     "mcSmartCart": {
@@ -1035,6 +1035,122 @@
           "_cid": "u6bFRsDTfd",
           "_protectedParams": [],
           "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@showLine)": {
+              ".line": {
+                "height": ".8px",
+                "background": "contrast(@bg-value)",
+                "opacity": ".05",
+                "margin-bottom": "25px"
+              }
+            },
+            ".text-white": {
+              "color": "#a99fc5 !important",
+              "&:hover": {
+                "color": "#ffffff !important"
+              }
+            },
+            ".foot-menu": {
+              "list-style": "none",
+              "display": "flex",
+              "justify-content": "flex-end",
+              "flex-wrap": "wrap",
+              "padding": "0",
+              "margin-bottom": "0",
+              "li": {
+                "padding": "10px"
+              },
+              "a": {
+                "display": "inline-block",
+                "line-height": "1.87",
+                "position": "relative",
+                "transition": "0.6s cubic-bezier(0.165, 0.84, 0.44, 1)",
+                "&:before": {
+                  "width": "0",
+                  "left": "auto",
+                  "right": "0",
+                  "bottom": "5px",
+                  "height": "1px",
+                  "content": "\"\"",
+                  "position": "absolute",
+                  "transition": "width 0.2s linear",
+                  "background": "#ffffff"
+                },
+                "&:hover::before": {
+                  "left": "0",
+                  "width": "100%",
+                  "right": "auto"
+                }
+              }
+            },
+            ".social-list": {
+              "padding": "10px",
+              "margin-bottom": "0",
+              "list-style": "none",
+              "display": "flex",
+              "flex-wrap": "wrap",
+              "justify-content": "center",
+              ".mbr-iconfont-social": {
+                "font-size": "1rem",
+                "color": "#ffffff"
+              },
+              ".soc-item": {
+                "overflow": "hidden",
+                "width": "30px",
+                "height": "30px",
+                "display": "inline-flex",
+                "justify-content": "center",
+                "align-items": "center",
+                "margin-right": "13px"
+              },
+              "a": {
+                "padding": "8px",
+                "line-height": "1",
+                "opacity": ".5",
+                "&:hover": {
+                  "opacity": "1"
+                }
+              }
+            },
+            ".mbr-text": {
+              "padding-top": "10px",
+              "margin-bottom": "0",
+              "transition": "0.6s cubic-bezier(0.165, 0.84, 0.44, 1)"
+            },
+            "@media (max-width: 767px)": {
+              ".foot-menu": {
+                "margin-top": "10px",
+                "justify-content": "center"
+              },
+              ".mbr-text": {
+                "text-align": "center",
+                "margin-bottom": "1rem"
+              }
+            }
+          },
+          "_name": "footer3",
+          "_sourceTheme": "firmm4",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"firmm4_footer3\" group=\"Footers\" global=\"\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <header>Show/Hide</header>\n        <input type=\"range\" inline=\"\" title=\"Menu Items\" name=\"menuItems\" min=\"0\" max=\"5\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline=\"\" title=\"Social Items\" name=\"socialItems\" min=\"0\" max=\"6\" step=\"1\" value=\"4\">\n        <input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n        <input type=\"checkbox\" title=\"Line\" name=\"showLine\" checked=\"\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax=\"\">\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#273240\" selected=\"\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked=\"\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n        <input type=\"range\" inline=\"\" title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n    \n    <div class=\"line\" mbr-if=\"showLine\"></div>\n    \n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row text-white justify-content-between\">\n            <div class=\"col-12 col-md-4 col-lg-5\">\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".mbr-text\">\n                    © Copyright 2025 Mobirise. All Rights Reserved.\n                </p>\n            </div>\n            <div class=\"col-12 col-md-4 col-lg-3\" mbr-if=\"socialItems > 0\">\n                <div mbr-list=\"\" mbr-list-grow=\"socialItems\" class=\"social-list text-center\">\n                    <div class=\"soc-item\">\n                        <a href=\"#\" target=\"_blank\">\n                            <span mbr-icon=\"\" class=\"socicon-twitter socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\">\n                        <a href=\"#\" target=\"_blank\">\n                            <span mbr-icon=\"\" class=\"socicon-facebook socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\">\n                        <a href=\"#\" target=\"_blank\">\n                            <span mbr-icon=\"\" class=\"socicon-youtube socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                    <div class=\"soc-item\">\n                        <a href=\"#\" target=\"_blank\">\n                            <span mbr-icon=\"\" class=\"socicon-instagram socicon mbr-iconfont mbr-iconfont-social\"></span>\n                        </a>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-12 col-md-4 col-lg-4\" mbr-if=\"menuItems > 0\">\n                <ul class=\"foot-menu\" mbr-list=\"\" mbr-list-grow=\"menuItems\">\n                    <li mbr-text=\"\" class=\"foot-menu-item mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\"foot-menu-item\">\n                        <a class=\"text-white\" href=\"#\" target=\"_blank\">About us</a>\n                    </li>\n                    \n                </ul>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_JSplaceholders": [],
+          "_PHPplaceholders": [],
+          "_anchor": "footer3-1n",
+          "_isUserblock": true,
+          "_cid": "u6bGoqAu6x",
+          "_protectedParams": [],
+          "_global": true,
           "_once": false,
           "_params": {}
         },
