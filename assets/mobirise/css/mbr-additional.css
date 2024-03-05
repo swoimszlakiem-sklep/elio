@@ -1135,6 +1135,100 @@ button {
 .cid-u6btz1n5u3 .btn_link {
   color: #6a7c92;
 }
+.cid-u6byCpWE6W {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #ffffff;
+}
+.cid-u6byCpWE6W .image-wrapper img {
+  width: 100%;
+  object-fit: cover;
+}
+.cid-u6byCpWE6W .mbr-section-title {
+  margin-bottom: 20px;
+  color: #273240;
+}
+.cid-u6byCpWE6W .mbr-text {
+  margin-bottom: 50px;
+}
+.cid-u6byCpWE6W .card_wrap {
+  margin-bottom: 45px;
+  display: flex;
+}
+.cid-u6byCpWE6W .item:nth-child(1) .iconfont-wrapper {
+  background-color: #c4d1ff;
+}
+.cid-u6byCpWE6W .item:nth-child(1) .mbr-iconfont {
+  color: #3f69ff;
+}
+.cid-u6byCpWE6W .item:nth-child(2) .iconfont-wrapper {
+  background-color: #ffedd9;
+}
+.cid-u6byCpWE6W .item:nth-child(2) .mbr-iconfont {
+  color: #ff9417;
+}
+.cid-u6byCpWE6W .item:nth-child(3) .iconfont-wrapper {
+  background-color: #ffffff;
+}
+.cid-u6byCpWE6W .item:nth-child(3) .mbr-iconfont {
+  color: #a7f2d6;
+}
+.cid-u6byCpWE6W .item:nth-child(4) .iconfont-wrapper {
+  background-color: #fff6c2;
+}
+.cid-u6byCpWE6W .item:nth-child(4) .mbr-iconfont {
+  color: #fedb01;
+}
+.cid-u6byCpWE6W .icon_block {
+  margin-right: 20px;
+  display: inline-block;
+}
+.cid-u6byCpWE6W .card_info {
+  display: inline-block;
+}
+.cid-u6byCpWE6W .iconfont-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.cid-u6byCpWE6W .iconfont-wrapper .mbr-iconfont {
+  color: #3f69ff;
+  font-size: 36px;
+  line-height: 70px;
+}
+.cid-u6byCpWE6W .card_title {
+  margin-bottom: 15px;
+  color: #273240;
+}
+.cid-u6byCpWE6W .card_text {
+  margin-bottom: 0;
+}
+.cid-u6byCpWE6W .mbr-section-btn {
+  margin-top: 30px;
+}
+@media (min-width: 992px) {
+  .cid-u6byCpWE6W .text-wrapper {
+    padding-right: 0;
+    padding-left: 2rem;
+  }
+}
+@media (max-width: 991px) {
+  .cid-u6byCpWE6W .card_wrap {
+    margin-bottom: 25px;
+  }
+  .cid-u6byCpWE6W .card_title {
+    margin-bottom: 10px;
+  }
+  .cid-u6byCpWE6W .image-wrapper {
+    margin-bottom: 40px;
+  }
+  .cid-u6byCpWE6W .mbr-text {
+    margin-bottom: 25px;
+  }
+}
 .cid-sLy9uOhBoE {
   padding-top: 75px;
   padding-bottom: 75px;
